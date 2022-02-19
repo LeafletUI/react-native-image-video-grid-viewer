@@ -1,6 +1,6 @@
 {
   "name": "@leafletui/rn-image-video-grid-viewer",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "This library sets images and videos in a grid layout",
   "main": "index.js",
   "scripts": {
