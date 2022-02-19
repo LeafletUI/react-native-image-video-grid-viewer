@@ -2,6 +2,17 @@ import React from 'react';
 import { View, Image, TouchableOpacity } from 'react-native';
 import Icon from "./icon";
 import { styles } from './styles';
+import PropTypes from "prop-types";
+
+/**
+ * MediaItem
+ * 
+ * @param {function} onPressVideo
+ * @param {object} image
+ * @param {*} index
+ * @param {string} videoPlayIcon
+ * @returns a rendering of each of the image or video
+ */
 
 const MediaItem = ({
     onPressVideo,
@@ -37,7 +48,7 @@ const MediaItem = ({
                         height: 50,
                     }}
                 >
-                    <Icon source={{ uri: videoPlayIcon || "https://www.coollockers.co.uk/wp-content/uploads/2020/04/play-icon.png" }} size={50} />
+                    <Icon source={{ uri: videoPlayIcon ? videoPlayIcon : "https://www.coollockers.co.uk/wp-content/uploads/2020/04/play-icon.png" }} height={50} width={50} />
                 </View>
             </TouchableOpacity>
         ) : (
@@ -60,5 +71,11 @@ const MediaItem = ({
     )
 };
 
+MediaItem.propTypes = {
+    onPressVideo: PropTypes.func.isRequired,
+    image: PropTypes.object.isRequired,
+    index: PropTypes.any,
+    videoPlayIcon: PropTypes.string,
+};
+
 export default MediaItem;
-// prop types here

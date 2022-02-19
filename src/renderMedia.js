@@ -1,8 +1,20 @@
 import React from 'react';
-import { View, TouchableOpacity } from 'react-native';
+import { View, TouchableOpacity, Text } from 'react-native';
 import MediaItem from './mediaItem';
 import { styles } from './styles';
+import PropTypes from "prop-types";
 
+
+
+/**
+ * RenderMedia
+ * 
+ * @param {number} start
+ * @param {boolean} overflow
+ * @param {Array} images
+ * @param {Function} onPress
+ * @returns +<number of remaining images or videos> for more than 5 images or videos
+ */
 const RenderMedia = (start, overflow, images, onPress) => (
     <>
         <MediaItem image={images[start]} onPress={onPress} index={start} />
@@ -24,5 +36,12 @@ const RenderMedia = (start, overflow, images, onPress) => (
         )}
     </>
 );
+
+RenderMedia.propTypes = {
+    start: PropTypes.func,
+    overflow: PropTypes.bool,
+    images: PropTypes.arrayOf(PropTypes.object),
+    onPress: PropTypes.func,
+};
 
 export default RenderMedia;

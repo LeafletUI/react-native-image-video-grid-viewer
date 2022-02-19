@@ -2,6 +2,19 @@ import React from "react";
 import { Image, ViewPropTypes } from "react-native";
 import PropTypes from "prop-types";
 
+/**
+ * 
+ * @param {object} style
+ * @param {object} source - can be { uri: <url> } or require(<url>)
+ * @param {boolean} useDefault
+ * @param {object} useDefaultImage
+ * @param {string} resizeMode
+ * @param {number} width
+ * @param {number} height
+ * @param {number} borderWidth
+ * @returns play icon image
+ */
+
 const Icon = ({
     style,
     source,
@@ -15,7 +28,7 @@ const Icon = ({
     return (
         <Image
             source={uri}
-            style={[{ width, height, borderWidth }, style]}
+            style={[{ width: width, height: height, borderWidth: borderWidth }, style]}
             resizeMode={resizeMode || "contain"}
             onError={() => {
                 if (useDefault && !useDefaultImage) {
@@ -27,14 +40,21 @@ const Icon = ({
 };
 
 Icon.defaultProps = {
-    size: fs(18),
-    style: undefined,
+    height: 50,
+    width: 50,
+    borderWidth: 0,
+    useDefault: false,
+    useDefaultImage: {},
+    style: {},
 };
 
 Icon.propTypes = {
-    name: PropTypes.string.isRequired,
-    size: PropTypes.number,
+    height: PropTypes.number.isRequired,
+    width: PropTypes.number.isRequired,
+    borderWidth: PropTypes.number.isRequired,
+    useDefault: PropTypes.bool,
+    useDefaultImage: PropTypes.symbol,
     style: ViewPropTypes.style,
 };
 
-export default React.memo(Icon);
+export default Icon;

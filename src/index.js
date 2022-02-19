@@ -4,11 +4,20 @@ import MediaItem from './mediaItem';
 import Images from './images';
 import RenderMedia from './renderMedia';
 import { styles } from './styles';
+import PropTypes from "prop-types";
+
+/**
+ * 
+ * @param {Array} images
+ * @param {function} onPress
+ * @param {object} style
+ * @returns a rendering of the grids to react-native screen
+ */
 
 export default class RNImageVideoGridViewer extends Component {
     render() {
         const { images, style, onPress } = this.props;
-        // console.log(images, 'images >>')
+
         return images.length > 0 ? (
             <View style={{ ...styles.container_row, ...style }}>
                 {images.length < 3 ? (
@@ -29,4 +38,10 @@ export default class RNImageVideoGridViewer extends Component {
             </View>
         ) : null;
     }
-}
+};
+
+RNImageVideoGridViewer.propTypes = {
+    images: PropTypes.array.isRequired,
+    onPress: PropTypes.func.isRequired,
+    style: ViewPropTypes.style,
+};

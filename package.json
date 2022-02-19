@@ -26,5 +26,8 @@
   "bugs": {
     "url": "https://github.com/AnayoOleru/react-native-image-video-grid-viewer/issues"
   },
-  "homepage": "https://github.com/AnayoOleru/react-native-image-video-grid-viewer#readme"
+  "homepage": "https://github.com/AnayoOleru/react-native-image-video-grid-viewer#readme",
+  "dependencies": {
+    "metro-react-native-babel-preset": "^0.68.0"
+  }
 }
