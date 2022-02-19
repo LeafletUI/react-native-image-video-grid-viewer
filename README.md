@@ -1,6 +1,6 @@
 # React Native Image Video Grid Viewer
 
-![alt text](https://github.com/LeafletUI/react-native-image-video-grid-viewer/blob/main/screenshots/Simulator%20Screen%20Shot%20-%20iPhone%2013%20-%202022-02-19%20at%2016.33.24.png?raw=true)
+![alt text](https://github.com/LeafletUI/react-native-image-video-grid-viewer/blob/main/screenshots/screenshot1.png?raw=true)
 
 This is a component for IOS and Android images and videos grid layout.
 
