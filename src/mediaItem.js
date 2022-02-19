@@ -5,26 +5,29 @@ import { styles } from './styles';
 import PropTypes from "prop-types";
 
 /**
- * MediaItem
+ * Conditionally render video with play icon or image without the play icon
  * 
- * @param {function} onPressVideo
+ * @param {function} onPress
  * @param {object} image
  * @param {*} index
  * @param {string} videoPlayIcon
+ * @param {number} playIconHeight
+ * @param {number} playIconWidth
  * @returns a rendering of each of the image or video
  */
 
 const MediaItem = ({
-    onPressVideo,
+    onPress,
     image,
     index,
     videoPlayIcon,
+    playIconHeight, playIconWidth,
 }) => {
     return (image ? (
         image.type === "video" ? (
             <TouchableOpacity
                 style={styles.image_view}
-                onPress={onPressVideo}
+                onPress={(event) => onPress(image, index, event)}
             >
                 <Image
                     style={styles.image}
@@ -48,14 +51,14 @@ const MediaItem = ({
                         height: 50,
                     }}
                 >
-                    <Icon source={{ uri: videoPlayIcon ? videoPlayIcon : "https://www.coollockers.co.uk/wp-content/uploads/2020/04/play-icon.png" }} height={50} width={50} />
+                    <Icon source={{ uri: videoPlayIcon ? videoPlayIcon : "https://www.coollockers.co.uk/wp-content/uploads/2020/04/play-icon.png" }} height={playIconHeight} width={playIconWidth} />
                 </View>
             </TouchableOpacity>
         ) : (
 
             <TouchableOpacity
                 style={styles.image_view}
-                onPress={(event) => props.onPress(image.url, index, event)}>
+                onPress={(event) => onPress(image, index, event)}>
                 <Image
                     style={styles.image}
                     resizeMode="cover"
@@ -72,10 +75,12 @@ const MediaItem = ({
 };
 
 MediaItem.propTypes = {
-    onPressVideo: PropTypes.func.isRequired,
+    onPress: PropTypes.func.isRequired,
     image: PropTypes.object.isRequired,
     index: PropTypes.any,
     videoPlayIcon: PropTypes.string,
+    playIconHeight: PropTypes.number,
+    playIconWidth: PropTypes.number,
 };
 
 export default MediaItem;

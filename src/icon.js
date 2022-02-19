@@ -3,6 +3,7 @@ import { Image, ViewPropTypes } from "react-native";
 import PropTypes from "prop-types";
 
 /**
+ * Render the play icon for video
  * 
  * @param {object} style
  * @param {object} source - can be { uri: <url> } or require(<url>)

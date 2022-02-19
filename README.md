@@ -1,6 +1,7 @@
 # React Native Image Video Grid Viewer
 
-![alt text](https://github.com/LeafletUI/react-native-image-video-grid-viewer/blob/main/screenshots/screenshot1.png?raw=true)
+<!-- ![alt text](https://github.com/LeafletUI/react-native-image-video-grid-viewer/blob/main/screenshots/screenshot1.png?raw=true) -->
+![Demo screenshot]<img src="https://github.com/LeafletUI/react-native-image-video-grid-viewer/blob/main/screenshots/screenshot1.png?raw=true" width="400" height="790">
 
 This is a component for IOS and Android images and videos grid layout.
 
@@ -23,10 +24,13 @@ npm install @leafletui/rn-image-video-grid-viewer
 
 ### Props
 
-| Props        | Default     | Options  |
+| Props        | Required     | Description  |
 | ------------- |:-------------:| -----:|
-| tint      | dark | light, dark, default |
-| transitionDuration     | 300      | custom in ms |
+| images      | true | [{ type: 'image', url: 'https://image.jpg', videoThumbnail: null }, { type: 'video', url: 'https://image.mp4', videoThumbnail: 'https://imageThumb.jpg' }] |
+| style     | false      | style the image container |
+| onPress     | true      | returns the image properties |
+| playIconHeight     | true      | the video play icon height |
+| playIconWidth     | true      | the video play icon width |
 
 ### Show me the code - here it is below:
 
@@ -53,6 +57,10 @@ export default function App() {
             { url: "https://images.unsplash.com/photo-1601831698630-a814370b9cca?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8c21pbGUlMjBnaXJsfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60", type: "video", videoThumbnail: "https://images.unsplash.com/photo-1601831698630-a814370b9cca?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8c21pbGUlMjBnaXJsfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60" },
             { url: "https://images.unsplash.com/photo-1601831698630-a814370b9cca?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8c21pbGUlMjBnaXJsfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60", type: "video", videoThumbnail: "https://images.unsplash.com/photo-1601831698630-a814370b9cca?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8c21pbGUlMjBnaXJsfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60" },
           ]}
+          onPress={(item) => { console.log(item, 'selected image properties', item.type, 'video/image') }}
+          style={{}} 
+          playIconHeight={50} 
+          playIconWidth={50}
         />
       </View>
       <Text style={[styles.textStyle, { marginTop: 50, fontWeight: 'bold' }]}>LeafletUI</Text>
@@ -74,6 +82,10 @@ const styles = StyleSheet.create({
     width: "100%",
     height: "60%",
   },
+    textStyle: {
+    textAlign: "center",
+    fontSize: 20,
+  }
 });
 
 ```

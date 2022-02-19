@@ -1,4 +1,3 @@
-import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
 import RNImageVideoGridViewer from "@leafletui/rn-image-video-grid-viewer";
 
@@ -20,13 +19,19 @@ export default function App() {
             { url: "https://images.unsplash.com/photo-1601831698630-a814370b9cca?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8c21pbGUlMjBnaXJsfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60", type: "video", videoThumbnail: "https://images.unsplash.com/photo-1601831698630-a814370b9cca?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8c21pbGUlMjBnaXJsfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60" },
             { url: "https://images.unsplash.com/photo-1601831698630-a814370b9cca?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8c21pbGUlMjBnaXJsfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60", type: "video", videoThumbnail: "https://images.unsplash.com/photo-1601831698630-a814370b9cca?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8c21pbGUlMjBnaXJsfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60" },
           ]}
+          onPress={(item) => { console.log(item, 'selected image properties', item.type, 'video/image') }}
+          style={{}} 
+          playIconHeight={50} 
+          playIconWidth={50}
         />
       </View>
       <Text style={[styles.textStyle, { marginTop: 50, fontWeight: 'bold' }]}>LeafletUI</Text>
       <Text style={styles.textStyle}>React Native Image-Video Grid Viewer library</Text>
 
-      <Text style={{ textAlign: "center",
-    fontSize: 15 }}>Subscribe to our channel and leave a github star</Text>
+      <Text style={{
+        textAlign: "center",
+        fontSize: 15
+      }}>Subscribe to our channel and leave a github star</Text>
     </View>
   );
 }

@@ -7,15 +7,17 @@ import PropTypes from "prop-types";
 
 
 /**
- * RenderMedia
+ * Render more than 2 and 3 images in a better grid layout on the screen
  * 
  * @param {number} start
  * @param {boolean} overflow
  * @param {Array} images
  * @param {Function} onPress
+ * @param {number} playIconHeight
+ * @param {number} playIconWidth
  * @returns +<number of remaining images or videos> for more than 5 images or videos
  */
-const RenderMedia = (start, overflow, images, onPress) => (
+const RenderMedia = (start, overflow, images, onPress, playIconHeight, playIconWidth) => (
     <>
         <MediaItem image={images[start]} onPress={onPress} index={start} />
         {images[start + 1] && (
@@ -24,6 +26,8 @@ const RenderMedia = (start, overflow, images, onPress) => (
                     image={images[start + 1]}
                     onPress={onPress}
                     index={start + 1}
+                    playIconHeight={playIconHeight}
+                    playIconWidth={playIconWidth}
                 />
                 {overflow && (
                     <TouchableOpacity
@@ -42,6 +46,8 @@ RenderMedia.propTypes = {
     overflow: PropTypes.bool,
     images: PropTypes.arrayOf(PropTypes.object),
     onPress: PropTypes.func,
+    playIconHeight: PropTypes.number,
+    playIconWidth: PropTypes.number,
 };
 
 export default RenderMedia;
