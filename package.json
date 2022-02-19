@@ -1,0 +1,30 @@
+{
+  "name": "rn-image-video-grid-viewer",
+  "version": "1.0.0",
+  "description": "This library sets images and videos in a grid layout",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AnayoOleru/react-native-image-video-grid-viewer.git"
+  },
+  "keywords": [
+    "react-native",
+    "ios",
+    "android",
+    "expo",
+    "image",
+    "video",
+    "grid",
+    "ui",
+    "component"
+  ],
+  "author": "Anayo Oleru <anayo_oleru@outlook.com> (https://www.linkedin.com/in/anayooleru/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/AnayoOleru/react-native-image-video-grid-viewer/issues"
+  },
+  "homepage": "https://github.com/AnayoOleru/react-native-image-video-grid-viewer#readme"
+}
