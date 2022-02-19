@@ -1,10 +1,10 @@
 {
   "name": "@leafletui/rn-image-video-grid-viewer",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "This library sets images and videos in a grid layout",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": ""
   },
   "repository": {
     "type": "git",
