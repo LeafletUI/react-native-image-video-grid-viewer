@@ -1,11 +1,8 @@
 # React Native Image Video Grid Viewer
 
-<!-- ![alt text](https://github.com/LeafletUI/react-native-image-video-grid-viewer/blob/main/screenshots/screenshot1.png?raw=true) -->
 <img src="https://res.cloudinary.com/dvfr0z8wr/image/upload/v1645292390/Simulator_Screen_Shot_-_iPhone_13_-_2022-02-19_at_16.33.24.png" width="400" height="790">
 
-This is a component for IOS and Android images and videos grid layout.
-
-Can be installed in both Expo managed, bare and react-native cli
+This is a component for IOS and Android images and videos grid layout. Can be installed in both Expo managed, bare and react-native cli
 
 Checkout the demo here: [Image Video Grid Viewer Demo](https://youtu.be/urY03qCbVbo).
 
@@ -90,7 +87,7 @@ const styles = StyleSheet.create({
 
 ```
 
-# Contributions are welcomed, we are ready to review and merge them ASAP
+### Contributions are welcomed, we are ready to review and merge them ASAP
 
-# Do leave a GitHub Star
+### Do leave a GitHub Star
 
