@@ -1,6 +1,6 @@
 {
-  "name": "rn-image-video-grid-viewer",
-  "version": "1.0.0",
+  "name": "@leafletui/rn-image-video-grid-viewer",
+  "version": "0.0.1",
   "description": "This library sets images and videos in a grid layout",
   "main": "index.js",
   "scripts": {
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/AnayoOleru/react-native-image-video-grid-viewer.git"
+    "url": "git+https://github.com/LeafletUI/react-native-image-video-grid-viewer.git"
   },
   "keywords": [
     "react-native",
@@ -21,13 +21,14 @@
     "ui",
     "component"
   ],
-  "author": "Anayo Oleru <anayo_oleru@outlook.com> (https://www.linkedin.com/in/anayooleru/)",
+  "author": "LeafletUI, Anayo Oleru <anayo_oleru@outlook.com> (https://www.linkedin.com/in/anayooleru/)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/AnayoOleru/react-native-image-video-grid-viewer/issues"
+    "url": "https://github.com/LeafletUI/react-native-image-video-grid-viewer/issues"
   },
-  "homepage": "https://github.com/AnayoOleru/react-native-image-video-grid-viewer#readme",
+  "homepage": "https://github.com/LeafletUI/react-native-image-video-grid-viewer#readme",
   "dependencies": {
     "metro-react-native-babel-preset": "^0.68.0"
-  }
+  },
+  "devDependencies": {}
 }

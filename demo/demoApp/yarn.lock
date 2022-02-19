@@ -1260,6 +1260,13 @@
     "@jridgewell/resolve-uri" "^3.0.3"
     "@jridgewell/sourcemap-codec" "^1.4.10"
 
+"@leafletui/rn-image-video-grid-viewer@^0.0.1":
+  version "0.0.1"
+  resolved "https://registry.yarnpkg.com/@leafletui/rn-image-video-grid-viewer/-/rn-image-video-grid-viewer-0.0.1.tgz#0a1153251e89ed1b5d40a92eb61df4a2869866aa"
+  integrity sha512-Wo0XE0TpAK2/guNwRaPCZEbYRXY2ockr3u5ehPwwXRVs685NcRscAGjVWJO/HjDZXX9hGsQZMZlzYzkUDtHGfg==
+  dependencies:
+    metro-react-native-babel-preset "^0.68.0"
+
 "@nodelib/fs.scandir@2.1.5":
   version "2.1.5"
   resolved "https://registry.npmjs.org/@nodelib/fs.scandir/-/fs.scandir-2.1.5.tgz"
