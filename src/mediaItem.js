@@ -76,7 +76,7 @@ const MediaItem = ({
 
 MediaItem.propTypes = {
     onPress: PropTypes.func.isRequired,
-    image: PropTypes.object.isRequired,
+    image: PropTypes.object,
     index: PropTypes.any,
     videoPlayIcon: PropTypes.string,
     playIconHeight: PropTypes.number,

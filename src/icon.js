@@ -45,7 +45,6 @@ Icon.defaultProps = {
     width: 50,
     borderWidth: 0,
     useDefault: false,
-    useDefaultImage: {},
     style: {},
 };
 

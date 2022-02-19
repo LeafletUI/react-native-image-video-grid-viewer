@@ -1,7 +1,7 @@
 {
   "name": "@leafletui/rn-image-video-grid-viewer",
-  "version": "0.0.3",
-  "description": "This library sets images and videos in a grid layout",
+  "version": "0.0.4",
+  "description": "This is a component for IOS and Android images and videos grid layout. Can be installed in both Expo managed, bare and react-native cli",
   "main": "index.js",
   "scripts": {
     "test": ""

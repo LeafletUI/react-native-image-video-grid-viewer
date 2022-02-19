@@ -32,9 +32,8 @@ npm install @leafletui/rn-image-video-grid-viewer
 ### Show me the code - here it is below:
 
 ```js
-import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
-import RNImageVideoGridViewer from "rn-image-video-grid-viewer";
+import RNImageVideoGridViewer from "@leafletui/rn-image-video-grid-viewer";
 
 export default function App() {
   return (
