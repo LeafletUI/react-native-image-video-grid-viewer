@@ -90,3 +90,4 @@ const styles = StyleSheet.create({
 
 ### Do leave a GitHub Star
 
+Creator: Anayo Samson Oleru
