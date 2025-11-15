@@ -9,7 +9,7 @@ import PropTypes from "prop-types";
 /**
  * Render the Videos and Images
  * 
- * @param {Array} images
+ * @param {Array} images (video thumbnails and images
  * @param {function} onPress
  * @param {object} style
  * @param {number} playIconHeight
